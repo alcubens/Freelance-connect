@@ -63,8 +63,91 @@
         <input type="color" id="couleur" name="couleur" value="#008000" />
       </fieldset>
 
+      <!-- section 3 -->
       <fieldset>
-        <legend></legend>
+        <legend>Informations professionnelles</legend>
+
+        <!-- experience -->
+        <label for="experience">Années d'expérience :</label>
+        <input
+          type="number"
+          id="experience"
+          name="experience"
+          min="0"
+          max="50"
+        />
+
+        <!-- TJM -->
+        <label for="tjm">Taux Journalier Moyen (TJM) en € :</label>
+        <input type="number" id="tjm" name="tjm" min="0" step="50" />
+
+        <!-- seniority -->
+        <label for="seniority">Niveau de séniorité estimé :</label>
+        <input
+          type="range"
+          id="seniority"
+          name="seniority"
+          min="1"
+          max="5"
+          value="3"
+        />
+
+        <!-- languages -->
+        <p>Langages maîtrisés :</p>
+        <input
+          type="checkbox"
+          name="langages[]"
+          id="angl"
+          value="anglais"
+          checked
+        />
+        <label for="angl">anglais</label>
+
+        <input type="checkbox" name="langages[]" id="fr" value="français" />
+        <label for="fr">français</label>
+
+        <input type="checkbox" name="langages[]" id="esp" value="espagnol" />
+        <label for="esp">espagnol</label>
+
+        <input type="checkbox" name="langages[]" id="ukr" value="ukrainien" />
+        <label for="ukr">ukrainien</label>
+
+        <!-- Statut juridique -->
+        <div>
+          <p>Statut juridique :</p>
+          <input
+            type="radio"
+            name="statut"
+            id="auto"
+            value="Auto-entrepreneur"
+            checked="checked"
+          />
+          <label for="auto">Auto-entrepreneur</label>
+
+          <input type="radio" name="statut" id="sasu" value="SASU" />
+          <label for="sasu">SASU</label>
+
+          <input type="radio" name="statut" id="eurl" value="EURL" />
+          <label for="eurl">EURL</label>
+        </div>
+
+        <!-- Région d'intervention -->
+        <label for="région">Région d'intervention :</label>
+        <select name="region" id="region">
+          <optgroup label="Groupe Nord">
+            <option value="Hauts-de-France">Hauts-de-France</option>
+            <option value="Normandie">Normandie</option>
+            <option value="Île-de-France">Île-de-France</option>
+          </optgroup>
+
+          <optgroup label="Groupe Sud">
+            <option value="Occitanie">Occitanie</option>
+            <option value="Provence-Alpes-Côte d'Azur">
+              Provence-Alpes-Côte d'Azur
+            </option>
+            <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+          </optgroup>
+        </select>
       </fieldset>
 
       <fieldset>
