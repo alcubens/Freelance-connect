@@ -3,7 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Formulaire</title>
   </head>
-  <body></body>
+  <body>
+    <form action="/traitement" method="post" enctype="multipart/form-data">
+      <!-- section 1 -->
+      <fieldset>
+        <legend>Identité & Sécurité</legend>
+
+        <!-- hidden -->
+        <input type="hidden" name="source" value="inscription_web" />
+
+        <!-- prénom et nom -->
+        <label for="prenom">Votre prénom* :</label>
+        <input type="text" name="prenom" id="prenom" required autofocus />
+
+        <label for="nom">Votre nom* :</label>
+        <input type="text" name="nom" id="nom" placeholder="DUPONT" required />
+
+        <!-- password -->
+        <label for="mdp">Votre mot de passe :</label>
+        <input
+          type="password"
+          name="motdepasse"
+          id="mdp"
+          minlength="8"
+          required
+        />
+
+        <!-- fichier -->
+        <label for="fichier">Envoyer votre photo de profil :</label>
+        <input type="file" name="fichier" id="fichier" accept=".jpg,.png" />
+      </fieldset>
+
+      <!-- section 2 -->
+      <fieldset>
+        <legend>Contact & Profil</legend>
+
+        <!-- email -->
+        <label for="email">Email pro :</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- phone -->
+        <label for="telephone">Téléphone :</label>
+        <input
+          type="tel"
+          id="telephone"
+          name="telephone"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <!-- URL -->
+        <label for="site">Site web / Portfolio :</label>
+        <input type="url" name="site" id="site" />
+
+        <!-- couleur -->
+        <label for="couleur">Couleur du thème :</label>
+        <input type="color" id="couleur" name="couleur" value="#008000" />
+      </fieldset>
+
+      <fieldset>
+        <legend></legend>
+      </fieldset>
+
+      <fieldset>
+        <legend></legend>
+      </fieldset>
+
+      <fieldset>
+        <legend></legend>
+      </fieldset>
+    </form>
+  </body>
 </html>
