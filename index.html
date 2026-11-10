@@ -132,7 +132,7 @@
         </div>
 
         <!-- Région d'intervention -->
-        <label for="région">Région d'intervention :</label>
+        <label for="region">Région d'intervention :</label>
         <select name="region" id="region">
           <optgroup label="Groupe Nord">
             <option value="Hauts-de-France">Hauts-de-France</option>
@@ -150,12 +150,44 @@
         </select>
       </fieldset>
 
-      <fieldset>
-        <legend></legend>
-      </fieldset>
+      <!-- section4 -->
 
       <fieldset>
-        <legend></legend>
+        <legend>Disponibilités & Finalisation</legend>
+
+        <!-- date -->
+        <label for="date">Date de disponibilité* :</label>
+        <input type="date" name="date" id="date" required />
+
+        <!-- audit -->
+        <label for="audit">Dernier audit technique :</label>
+        <input
+          type="text"
+          id="audit"
+          name="audit"
+          value="Non réalisé"
+          readonly
+        />
+
+        <!-- motivation -->
+        <label for="motivation">Motivation :</label>
+        <textarea
+          name="motivation"
+          id="motivation"
+          rows="8"
+          cols="40"
+          maxlength="500"
+        ></textarea>
+
+        <!-- CGU -->
+        <label for="cgu"
+          >J'accepte les conditions générales d'utilisation*</label
+        >
+        <input type="checkbox" id="cgu" name="cgu" required />
+
+        <!-- Les boutons -->
+        <button type="submit">Soumettre le formulaire</button>
+        <button type="reset">Effacer le formulaire</button>
       </fieldset>
     </form>
   </body>
